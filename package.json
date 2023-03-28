@@ -1,0 +1,16 @@
+{
+    "name": "elec-server",
+    "version": "0.0.1",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron . ELECTRON_ENABLE_LOGGING=1"
+    },
+    "devDependencies": {
+        "electron": "^23.2.0"
+    },
+    "dependencies": {
+        "fastify": "^4.15.0",
+        "knex": "^2.4.2",
+        "sqlite3": "^5.1.6"
+    }
+}
