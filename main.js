@@ -1,10 +1,12 @@
 const { app, Tray, Menu, shell, Notification } = require('electron')
+const path = require('path')
 const { version } = require('./package.json')
 const startApp = require('./app/index.js')
 const log = require('./log/index.js')
+require('./updater/index.js')
 
 function initTrayIcon() {
-    const tray = new Tray('./public/favicon.ico');
+    const tray = new Tray(path.resolve(__dirname, './static/favicon.ico'));
     const trayContextMenu = Menu.buildFromTemplate([
         {
             label: '打开',
@@ -15,7 +17,8 @@ function initTrayIcon() {
         {
             label: '同步',
             click: () => {
-                log('1111', Notification.isSupported())
+                log(path.resolve(__dirname, './static/favicon.ico'))
+                log('1111')
             }
         },
         {
