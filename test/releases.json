@@ -3,5 +3,5 @@
     "version": "0.0.2",
     "date": "2023-03-28",
     "changelog": "upgrade \n\n\n\n\n",
-    "updateURL": "http://127.0.0.1:3001/setup.exe"
+    "updateURL": "http://127.0.0.1:3001/dist/setup.zip"
 }

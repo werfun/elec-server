@@ -3,7 +3,7 @@ const path = require('path')
 const { version } = require('./package.json')
 const startApp = require('./app/index.js')
 const log = require('./log/index.js')
-require('./updater/index.js')
+const { startUpdate } = require('./updater/index.js')
 
 function initTrayIcon() {
     const tray = new Tray(path.resolve(__dirname, './static/favicon.ico'));
@@ -15,10 +15,9 @@ function initTrayIcon() {
             }
         },
         {
-            label: '同步',
+            label: '更新',
             click: () => {
-                log(path.resolve(__dirname, './static/favicon.ico'))
-                log('1111')
+                startUpdate()
             }
         },
         {
